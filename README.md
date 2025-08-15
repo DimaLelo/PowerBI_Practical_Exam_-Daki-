@@ -25,36 +25,63 @@ A star schema was implemented with Sales as the fact table and Dates, Products, 
 ![Model View](Screenshot/model_view.png)
 
 
+Dax Measures
+Total Sales = SUM(Sales[SalesAmount])  which Calculates the sum of all sales amounts.
+
+Total Profit which calculates total profit using the calculated column Profit = SalesAmount - (Quantity * Cost)
+
+Profit Margin measures the percentage of sales that is profit.Profit Margin
+Profit Margin = DIVIDE([Total Profit], [Total Sales])
+
+Year-over-Year (YoY) Growth compares current period sales to the same period last year.
+YoY Growth = 
+VAR CurrentSales = [Total Sales]
+VAR LastYearSales = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Dates[Date]))
+RETURN DIVIDE(CurrentSales - LastYearSales, LastYearSales)
+
+
 Visualization & Reporting and Insights
 Interactive visuals grouped into customer insights, products insights, sales overview and general gallery were built to explore trends, outliers, and performance metrics. These include time-series line charts with forecasting, scatter plots with play axis, decomposition trees, KPIs, and maps with drill-down.
 
 
 
 Sales Overview
-## Sales Overview Page
-![Sales Overview](Screenshot/SalesOverview.png)
+
+
 Monthly sales range between approximately $5.4 million and $5.95 million, with the peak occurring in December 2023 at around $5.95 million. The lowest recorded month was about $5.21 million indicating relatively stable sales performance throughout the period.
 
 There is a strong positive correlation between quantity sold and profit, with high-volume items consistently generating higher profits. Subcategories such as Fiction, Audio Equipment, and Fitness are key drivers of sales volume.
 
 The Southern U.S. is the strongest market with  $21.69M (32.5% of total sales) suggesting focused marketing.
 
+## Sales Overview Page
+![Sales Overview](Screenshot/SalesOverview.png)
 
 Customer Insights
-![Customer Insights](Screenshot/CustomerInsights.png)
 
 The highest sales region is the South (USA) with $21.69M in total sales, and several top customers like Jennifer Rodriguez and Michael Taylor are linked to this region. This suggests that customer acquisition and retention strategies are particularly effective in the Southern U.S.
 
 While there are many customers, a small number contribute disproportionately to total revenue because the top 10 customers collectively account for over $650K in sales.
+![Customer Insights](Screenshot/CustomerInsights.png)
+
+
 
 
 
 Product insights
-![Product Insights](Screenshot/ProductInsights.png)
 
 The total sales was $66.64 million while total profit was $40.39million which show that a profit of over 20 million was achieved
 Clothing and Home are the most profitable categories, despite all five categories contribute exactly 20% each to total sales.
 The top product is a book, but electronics and apparel also dominate the top sellers
+![Product Insights](Screenshot/ProductInsights.png)
+
+
+
+Visual Gallery
+
+
+### Visual Gallery Page
+![Visual Gallery](Screenshot/Visual_Gallery.png)
 
 
 
@@ -66,6 +93,12 @@ The Sales Trend by Month chart shows relatively flat performance (~$5.2M to $5.9
 
 
 ### Visual Gallery Page
+The Visual Gallery in this Power BI report provides a comprehensive overview of sales performance across products, categories, customers, and regions.
+
+The bullet chart results show that Home and Clothing categories exceeded their budgets by a significant margin, while Electronics performed close to its budget target.
+ 
+ The top most performing product is Sci-Fi Thriller 97, generating $740K in revenue. Close behind are Sneakers 36, Xiaomi Redmi 160, and Treadmill 9, each with $720K in sales. Blouse 34 and Dress Shoes 26 follow, contributing $700K each
+
 ![Visual Gallery](Screenshot/Visual_Gallery.png)
 
 

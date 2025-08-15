@@ -3,6 +3,15 @@
 **Description**
 Built a Power BI dashboard using simulated sales dataset to analyze revenue, profit, and customer trends. I cleaned the data, modeled relationships, created advanced DAX measures, and designed interactive visuals
 
+Challenges faced
+
+One of the challenges I faced was that the Power BI report link failed to publish, despite multiple attempts. Additionally, some missing numerical values like cost triggered errors during the imputation process, which required me to drill up to a higher-level aggregation to resolve the issue. While the imputation problem was addressed, the publishing issue remained unresolved.
+
+Power bi link
+
+https://app.powerbi.com/groups/me/reports/bbf61047-c5e4-46ac-8e79-d4226c8d4b74/aeee1b859755850d519d?experience=power-bi
+
+
 Data Cleaning and Transformation
  
 The data had some missing values fot the categorical values I replaced the missing values with unknown while for the numerical values are drilled up and down to replace the missing values

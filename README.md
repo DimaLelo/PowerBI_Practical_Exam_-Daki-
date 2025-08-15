@@ -72,23 +72,9 @@ Product insights
 
 The total sales was $66.64 million while total profit was $40.39million which show that a profit of over 20 million was achieved
 Clothing and Home are the most profitable categories, despite all five categories contribute exactly 20% each to total sales.
+
 The top product is a book, but electronics and apparel also dominate the top sellers
 ![Product Insights](Screenshot/ProductInsights.png)
-
-
-
-Visual Gallery
-
-
-### Visual Gallery Page
-![Visual Gallery](Screenshot/Visual_Gallery.png)
-
-
-
-Limitations
-Perfectly Balanced Sales by Category because each of the  five categories (Books, Clothing, Electronics, Home, Sports) contributes exactly 20% of total sales
-The Sales Trend by Month chart shows relatively flat performance (~$5.2M to $5.95M per month) with no clear upward or downward trend.
-
 
 
 
@@ -101,4 +87,9 @@ The bullet chart results show that Home and Clothing categories exceeded their b
 
 ![Visual Gallery](Screenshot/Visual_Gallery.png)
 
+Limitations
+
+Perfectly Balanced Sales by Category because each of the  five categories (Books, Clothing, Electronics, Home, Sports) contributes exactly 20% of total sales
+
+The Sales Trend by Month chart shows relatively flat performance (~$5.2M to $5.95M per month) with no clear upward or downward trend.
 
